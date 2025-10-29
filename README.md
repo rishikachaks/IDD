@@ -1,1 +1,29 @@
-# IDD
+# Babson Path Finder Individual Deep Dive Project
+
+### Overview
+This project is a shortest path finder for the Babson College campus. It uses Dijkstra's algorithm to find the shortest path between two buildings on campus, its total distance (in feet), and total time (in minutes).
+
+---
+
+### Process
+To begin, I implemented **Dijkstra’s algorithm** in Python to calculate the shortest path between buildings. Each vertex represented a building, and each edge represented the walking distance between two neighboring locations.
+
+I used the **Babson College campus map** (shown below) to approximate the distances between buildings. By tracing the main walking routes—starting from **College Drive** and looping around to the **Upper Fields**—I measured relative distances in feet to create a graph (pictured below)
+
+![Babson Campus Map](/babson.map.png)
+![Babson Graph] (/babson.graph.png)
+
+The project’s goal was to explore which route provided the **fastest way to travel across campus**, especially between distant buildings on opposite sides of campus.
+
+Once I completed the graph, I wrote a few **tests** to verify that my algorithm produced correct results for different start and end locations.
+
+Finally, I created a **Tkinter app** in Python to make the project interactive. The interface includes dropdown menus for users to choose two campus locations and outputs the shortest route, total distance, and estimated travel time.  
+I built this with the help of generative AI to better understand Tkinter’s widgets and layout system, since I hadn’t used the library much before.
+
+---
+
+### Future Improvements
+In the future, I would like to:
+- Improve distance accuracy using real GPS or map coordinate data.
+- Add a visual map path highlighting the chosen route.
+- Use A* search for faster real-time performance.
